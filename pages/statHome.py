@@ -1,11 +1,5 @@
-# import numpy as np
-# import matplotlib.pyplot as plt
-# import pandas as pd
 import streamlit as st
 
-# rng = np.random.default_rng()
-
-# st.title("Aprenda estatística")
 st.subheader("Aprenda estatística")
 
 st.caption(

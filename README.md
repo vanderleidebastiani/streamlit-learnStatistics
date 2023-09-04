@@ -2,4 +2,6 @@
 
 Streamlit examples with few options to learn statistics
 
-Exemplos streamlit algumas opções para aprender estatística.
+Exemplos streamlit com algumas opções para aprender estatística.
+
+v0.1

@@ -1,13 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
-# import pandas as pd
 import streamlit as st
 
 rng = np.random.default_rng()
-
-# st.title("Aprenda estatística")
-# st.sidebar.title("Aprenda estatística")
-# st.sidebar.title("Distribuições de probabilidade")
 
 st.sidebar.subheader("Distribuição de probabilidades")
 dist = st.sidebar.selectbox("Distribuição", ["Gaussiana (Normal)", 
@@ -20,7 +15,6 @@ dist = st.sidebar.selectbox("Distribuição", ["Gaussiana (Normal)",
 
 n = st.sidebar.number_input("Tamanho da amostra", min_value=int(1), max_value=int(100000), value=int(1000), step=int(100))
 
-# st.sidebar.text("Parâmetros")
 st.sidebar.subheader("Parâmetros")
 if dist == "Gaussiana (Normal)":
     m = st.sidebar.number_input("Média", value=float(0), step = float(1))
@@ -52,12 +46,9 @@ else: # dist == "Poisson"
 run = st.sidebar.button("Amostrar")
 
 if run:
-    # title = ["Diatribuição", dist]
-    # title = title.join()
     fig=plt.figure(1)
     plt.hist(sample, ec="silver", fc="teal")
     plt.title("Distribuição " + dist, weight = "bold", loc="left")
     plt.xlabel("Valores amostrados")
     plt.ylabel("Frequência")
     st.pyplot(plt)
-

@@ -1,7 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
-# import pandas as pd
 import streamlit as st
 
 rng = np.random.default_rng()
@@ -32,13 +30,10 @@ run = st.sidebar.button("Amostrar")
 
 if run:
     st.subheader("Números amostrados")
-    # st.text(sample)
     fig = plt.figure(1)
     plt.hist(sample, ec="silver", fc="teal")
-    # plt.title("Histograma", weight="bold", loc="left")
     plt.xlabel("Valores amostrados")
     plt.ylabel("Frequência")
-    # st.pyplot(plt)
     col1, col2 = st.columns([0.3, 0.7])
     col1.text(sample)
     col2.pyplot(plt)
@@ -49,4 +44,3 @@ if run:
     st.caption("Média = " + str(v1.round(2)))
     st.caption("Desvio padrão = " + str(v2.round(2)))
     st.caption("Mediana = " + str(v3.round(2)))
-    # st.text()
